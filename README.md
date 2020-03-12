@@ -32,6 +32,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## About Project
-The front-end app is single page app(Anglular and Typescript)
+The front-end app is single page app(Anglular and Typescript).
+
 I don't not use any UI frameworks (e.g. Boostrap or Material Design),
+
 I made custom carousel component to show item places instead any library (e.g Swiper or owl carousel).
+
+I used HERE rest API to get informations about places and HERE maps to show places on the map. I hardcoded lat and lng to Berlin, alternative should dynamically location from devices.   
+
+Description is showed in plain text to avoid XSS issues,  alternative should be HTML sanitizations.
+ 
