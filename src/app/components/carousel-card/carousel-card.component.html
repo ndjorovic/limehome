@@ -1,0 +1,18 @@
+ <div class="card-wrapper" (click)="clickOnCard(cardItem)">
+  <div class="card-body">
+    <div class="img">
+      <img *ngIf="imgHref" class="img" [src]="imgHref">
+    </div>
+    <div class="info">
+      <div>
+        <p class="city">{{cardItem.title}}</p>
+        <p class="desc">{{cardItem.vicinity}}</p>
+      </div>
+      <div>
+        <p class="price"><b>$98</b></p>
+        <p class="desc">Design may vary</p>
+      </div>
+    </div>
+  </div>
+  <div class="button">Book</div>
+</div>

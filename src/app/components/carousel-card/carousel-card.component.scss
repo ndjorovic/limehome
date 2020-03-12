@@ -1,0 +1,53 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  .card-body {
+    display: flex;
+    margin-bottom: 20px;
+    .img {
+      height: 168px;
+      width: 120px;
+      max-width: 120px;
+      background: grey;
+    }
+    .info {
+      max-width: 200px;
+      padding-left: 20px;
+      font-size: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .city {
+        margin-bottom: 10px;
+        font-weight: bold;
+        width: 130px;
+        word-break: break-word;
+      }
+      .desc {
+        font-size: 1.3rem;
+        color: grey;
+        width: 130px;
+        word-break: break-word;
+      }
+      .price {
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    }
+  }
+  .button {
+    color: #fff;
+    background-color: #f7941d;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.02px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .button:hover {
+    background: #f68b09;
+    opacity: 0.8;
+  }
+}
