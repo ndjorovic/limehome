@@ -34,7 +34,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## About Project
 The front-end app is single page app(Anglular and Typescript).
 
-I don't not use any UI frameworks (e.g. Boostrap or Material Design),
+I did't use any UI frameworks (e.g. Boostrap or Material Design),
 
 I made custom carousel component to show item places instead any library (e.g Swiper or owl carousel).
 
@@ -42,3 +42,4 @@ I used HERE rest API to get informations about places and HERE maps to show plac
 
 Description is showed in plain text to avoid XSS issues,  alternative should be HTML sanitizations.
  
+You can see app on http://limehome.edeja.com/
