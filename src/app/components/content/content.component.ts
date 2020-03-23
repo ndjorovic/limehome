@@ -43,7 +43,7 @@ export class ContentComponent implements OnInit {
         const oldSelected = this.selectedItem;
         this.selectedItem = res;
         if (this.carouselItems) {
-          this.updateSelectedMarker(this.map, oldSelected, res);
+          this.updateSelectedMarker(oldSelected, res);
         }
       }
     });
@@ -56,6 +56,7 @@ export class ContentComponent implements OnInit {
     this.service.discoverPlace(this.lat, this.lng).subscribe((res: any) => {
       if (res) {
         this.carouselItems = res.results.items;
+        this.selectedItem = this.carouselItems[0];
         this.addMarkersToMap(this.map, this.carouselItems);
       }
     });
@@ -71,7 +72,7 @@ export class ContentComponent implements OnInit {
       defaultLayers.vector.normal.map,
       {
         center: { lat: this.lat, lng: this.lng },
-        zoom: 12,
+        zoom: 13,
         pixelRatio: window.devicePixelRatio || 1
       }
     );
@@ -81,7 +82,7 @@ export class ContentComponent implements OnInit {
 
   }
 
-  public updateSelectedMarker(map, oldSelected, selected) {
+  public updateSelectedMarker(oldSelected, selected) {
     if (oldSelected) {
       this.markers[oldSelected.id].setIcon(this.inactiveIcon);
     }
@@ -90,7 +91,6 @@ export class ContentComponent implements OnInit {
 
   public addMarkersToMap(map, items) {
     this.markers = [];
-
     items.forEach((element, index) => {
       if (!this.markers[element.id]) {
         let icon = this.inactiveIcon;
@@ -109,6 +109,8 @@ export class ContentComponent implements OnInit {
         delete this.markers[id];
       }
     }
+
+    this.updateSelectedMarker(null, items[0]);
   }
 
 }
